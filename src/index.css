@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+:root {
+  /* Colors */
+  --black: #000000;
+  --white: #ffffff;
+  --bg: #0f0e17;
+  --primary: #fed941;
+  --grey: #a7a9be;
+  /* Font */
+  --fontPrimary: "Montserrat", sans-serif;
+  /* Size fonts */
+  --headline1: 700 48px/58px var(--fontPrimary);
+  --headline2: 700 46px/56px var(--fontPrimary);
+  --headline3: 700 37px/31.5px var(--fontPrimary);
+  --headline4: 700 28px/34.13px var(--fontPrimary);
+  --headline5: 700 25px/30.48px var(--fontPrimary);
+  --body1: 400 18px/27px var(--fontPrimary);
+  --body1-bold: 700 18px/27px var(--fontPrimary);
+  --body2: 400 16px/19px var(--fontPrimary);
+  --body2-bold: 700 16px/22px var(--fontPrimary);
+  --button: 700 18px/28px var(--fontPrimary);
+  --caption: 400 12px/22px var(--fontPrimary);
+
+  /* Sizes */
+  --xs: 0.25rem;
+  --sm: 0.5rem;
+  --md: 1rem;
+  --lg: 1.5rem;
+  --xlg: 2rem;
+  --xxlg: 2.5rem;
+
+  --h-header: 3.5rem;
+  --w-icon: var(--lg);
+  --w-icon-sm: var(--md);
+  --w-card: 5rem;
+  --w-logo: 66.75px;
+  --w-spinner: var(--xxlg);
+  --gap-row: 0.75rem;
+  --gap-col: var(--md);
+  --gap-header: var(--lg);
+  --p-button: 10px var(--lg);
+  --top-card: var(--sm);
+  --section: var(--md);
+
+  --w-size: 73rem;
+  --h-full: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    /* Sizes */
+    --h-header: 7rem;
+    --w-card: 13.75rem;
+    --w-logo: 106.81px;
+    --w-spinner: 5rem;
+    --gap-row: var(--lg);
+    --gap-col: 3rem;
+    --top-card: var(--lg);
+    --section: 3.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  :root {
+    /* Sizes */
+    --gap-header: 3rem;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+body {
+  font: var(--body1);
+  background-color: var(--bg);
+  color: var(--white);
+}
+h1,
+.h1 {
+  font: var(--headline1);
+}
+h2,
+.h2 {
+  font: var(--headline2);
+}
+h3,
+.h3 {
+  font: var(--headline3);
+}
+svg {
+  vertical-align: bottom;
+  fill: currentColor;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-inline-size: 100%;
+  display: block;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
