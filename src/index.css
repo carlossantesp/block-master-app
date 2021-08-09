@@ -4,7 +4,7 @@
   /* Colors */
   --black: #000000;
   --black-hover: hsl(0, 0%, 20%);
-  --white: #ffffff;
+  --white: #fffffe;
   --bg: #0f0e17;
   --primary: #fed941;
   --primary-hover: hsl(48, 99%, 70%);
@@ -38,8 +38,8 @@
   --w-card: 5rem;
   --w-logo: 66.75px;
   --w-spinner: var(--xxlg);
-  --gap-row: 0.75rem;
-  --gap-col: var(--md);
+  --gap-col: 0.75rem;
+  --gap-row: var(--md);
   --gap-header: var(--lg);
   --p-button: 10px var(--lg);
   --top-card: var(--sm);
@@ -53,11 +53,11 @@
   :root {
     /* Sizes */
     --h-header: 7rem;
-    --w-card: 13.75rem;
+    --w-card: 8rem;
     --w-logo: 106.81px;
     --w-spinner: 5rem;
-    --gap-row: var(--lg);
-    --gap-col: 3rem;
+    --gap-col: var(--lg);
+    --gap-row: 3rem;
     --top-card: var(--lg);
     --section: 3.5rem;
   }
@@ -66,6 +66,7 @@
   :root {
     /* Sizes */
     --gap-header: 3rem;
+    --w-card: 13rem;
   }
 }
 
@@ -104,7 +105,6 @@ h3,
   font: var(--headline3);
 }
 svg {
-  vertical-align: bottom;
   fill: currentColor;
 }
 a {
