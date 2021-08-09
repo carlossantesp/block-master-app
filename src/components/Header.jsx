@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Wrapper from "./Wrapper";
 import logo from "../images/logo.svg";
 import Navbar from "./Navbar";
+import Form from "./Form";
 
 const HeaderStyled = styled.header`
   position: fixed;
@@ -10,6 +11,7 @@ const HeaderStyled = styled.header`
   left: 0;
   width: 100%;
   z-index: 1;
+  background-color: var(--bg);
 `;
 const HeaderContainStyled = styled.div`
   display: flex;
@@ -33,6 +35,7 @@ const Header = ({ title }) => {
             <img src={logo} alt={title} />
           </HeaderLogoStyled>
           <Navbar />
+          <Form />
         </HeaderContainStyled>
       </Wrapper>
     </HeaderStyled>

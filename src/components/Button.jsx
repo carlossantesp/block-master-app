@@ -24,6 +24,10 @@ const ButtonStyled = styled.button`
     background-color: ${({ typeBtn }) =>
       typeBtn === "primary" ? "var(--primary-hover)" : "var(--black-hover)"};
   }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const Button = ({
