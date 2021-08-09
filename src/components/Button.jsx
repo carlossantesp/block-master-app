@@ -36,10 +36,11 @@ const Button = ({
   isBlock = false,
   isLink = false,
   isActive = false,
+  type = "button",
 }) => {
   return (
     <ButtonStyled
-      type="button"
+      type={type}
       isLink={isLink}
       typeBtn={typeBtn}
       isBlock={isBlock}

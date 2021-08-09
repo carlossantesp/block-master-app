@@ -44,7 +44,7 @@ const MovieImageStyled = styled.img`
 `;
 
 const Movie = ({ movie }) => {
-  const { poster_path, title, id, vote_average } = movie;
+  const { poster_path, title, vote_average } = movie;
   return (
     <MovieStyled>
       <MovieVoteStyled vote={vote_average}>
