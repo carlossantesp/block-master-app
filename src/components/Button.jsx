@@ -37,6 +37,7 @@ const Button = ({
   isLink = false,
   isActive = false,
   type = "button",
+  ...otherProps
 }) => {
   return (
     <ButtonStyled
@@ -45,6 +46,7 @@ const Button = ({
       typeBtn={typeBtn}
       isBlock={isBlock}
       className={isActive && "active"}
+      {...otherProps}
     >
       {children}
     </ButtonStyled>
