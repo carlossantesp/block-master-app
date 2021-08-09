@@ -3,9 +3,11 @@
 :root {
   /* Colors */
   --black: #000000;
+  --black-hover: hsl(0, 0%, 20%);
   --white: #ffffff;
   --bg: #0f0e17;
   --primary: #fed941;
+  --primary-hover: hsl(48, 99%, 70%);
   --grey: #a7a9be;
   /* Font */
   --fontPrimary: "Montserrat", sans-serif;

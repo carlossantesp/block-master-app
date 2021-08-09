@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Wrapper from "./Wrapper";
 import logo from "../images/logo.svg";
+import Navbar from "./Navbar";
 
 const HeaderStyled = styled.header`
   position: fixed;
@@ -31,6 +32,7 @@ const Header = ({ title }) => {
           <HeaderLogoStyled>
             <img src={logo} alt={title} />
           </HeaderLogoStyled>
+          <Navbar />
         </HeaderContainStyled>
       </Wrapper>
     </HeaderStyled>
