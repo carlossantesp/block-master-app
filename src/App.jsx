@@ -1,12 +1,11 @@
-import React from "react";
-import logo from "./images/logo.svg";
+import React, { Fragment } from "react";
+import Header from "./components/Header";
 
 const App = () => {
   return (
-    <div>
-      <img src={logo} alt="Blockmaster" />
-      <h1>Project Blockmaster with Reactjs</h1>
-    </div>
+    <Fragment>
+      <Header title="Block Master" />
+    </Fragment>
   );
 };
 
