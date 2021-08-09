@@ -19,7 +19,7 @@ const MovieVoteStyled = styled.p`
   background-color: rgba(167, 169, 190, 0.84);
   border: 3px solid #0e3fa9;
   border-left: none;
-  border-color: ${({ vote }) => vote > 7 && "var(--primary)"};
+  border-color: ${({ vote }) => vote >= 7 && "var(--primary)"};
   border-radius: 0 var(--xxlg) var(--xxlg) 0;
   padding: 0.375rem 0.625rem;
   svg {
