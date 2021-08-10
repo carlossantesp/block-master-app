@@ -6,6 +6,7 @@
   --black-hover: hsl(0, 0%, 20%);
   --white: #fffffe;
   --bg: #0f0e17;
+  --bg-alt: #161422;
   --primary: #fed941;
   --primary-hover: hsl(48, 99%, 70%);
   --grey: #a7a9be;
@@ -54,7 +55,7 @@
 @media screen and (min-width: 768px) {
   :root {
     /* Sizes */
-    --h-header: 7rem;
+    --h-header: 5rem;
     --w-card: 8rem;
     --w-logo: 106.81px;
     --w-spinner: 5rem;
@@ -69,6 +70,7 @@
 @media screen and (min-width: 992px) {
   :root {
     /* Sizes */
+    --h-header: 7rem;
     --gap-header: 3rem;
     --w-card: 13rem;
     --w-loader: 80px;

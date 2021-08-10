@@ -14,8 +14,12 @@ const MovieListStyled = styled.main`
   padding-block-end: var(--section);
 `;
 const MoviListTitleStyled = styled.h1`
-  font: var(--headline1);
-  margin-block-end: 3rem;
+  font: var(--body2-bold);
+  margin-block-end: var(--md);
+  @media screen and (min-width: 768px) {
+    font: var(--headline3);
+    margin-block-end: 3rem;
+  }
 `;
 const MovieListContainStyled = styled.section`
   display: grid;
