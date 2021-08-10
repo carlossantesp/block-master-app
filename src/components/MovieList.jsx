@@ -5,6 +5,7 @@ import Movie from "./Movie";
 import api from "../api";
 import { ADD_MOVIES } from "../actions";
 import { useSelector, useDispatch } from "react-redux";
+import Spinner from "./Spinner";
 
 const MovieListStyled = styled.main`
   margin-block-start: var(--h-header);
@@ -27,6 +28,7 @@ const MovieList = () => {
   const movieListId = state.list[state.filter];
   const movieList = state.movieList;
   const [page, setPage] = useState(2);
+  const [isVisible, setIsVisible] = useState(false);
   const dispatch = useDispatch();
 
   const getMoviesNext = async () => {
@@ -44,6 +46,7 @@ const MovieList = () => {
     new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
+          setIsVisible(true);
           getMoviesNexter.current();
         }
       },
@@ -78,7 +81,7 @@ const MovieList = () => {
             <Movie key={id} movie={movieList.get(id)} />
           ))}
         </MovieListContainStyled>
-        <div ref={setElement}></div>
+        <div ref={setElement}>{isVisible && <Spinner />}</div>
       </Wrapper>
     </MovieListStyled>
   );

@@ -44,6 +44,8 @@
   --p-button: 10px var(--lg);
   --top-card: var(--sm);
   --section: var(--md);
+  --w-loader: 40px;
+  --border-loader: 4px;
 
   --w-size: 73rem;
   --h-full: 100vh;
@@ -60,6 +62,8 @@
     --gap-row: 3rem;
     --top-card: var(--lg);
     --section: 3.5rem;
+    --w-loader: 60px;
+    --border-loader: 6px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -67,6 +71,8 @@
     /* Sizes */
     --gap-header: 3rem;
     --w-card: 13rem;
+    --w-loader: 80px;
+    --border-loader: 8px;
   }
 }
 
