@@ -39,6 +39,7 @@ const MovieList = () => {
       payload: results,
     });
     setPage(page + 1);
+    setIsVisible(false);
   };
 
   const getMoviesNexter = useRef(getMoviesNext);
