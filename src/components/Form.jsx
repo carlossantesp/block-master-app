@@ -34,7 +34,10 @@ const Form = () => {
     }
     return dispatch({
       type: SET_FILTER,
-      payload: "all",
+      payload: {
+        type: "all",
+        title: "Todas las peliculas",
+      },
     });
   };
   return (

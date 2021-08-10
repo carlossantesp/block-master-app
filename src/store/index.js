@@ -18,6 +18,8 @@ const movies = await getMovies();
 const initialState = {
   movieList: movieListAsMap(movies),
   filter: "all",
+  title: "Todas las peliculas",
+  notFound: "",
   list: {
     all: getAllIds(movies),
     mostValued: getMostValuedIds(movies),

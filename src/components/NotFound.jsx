@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import img404 from "../images/404.png";
 
@@ -19,11 +20,12 @@ const NotFoundTitleStyled = styled.p`
 `;
 
 const NotFound = () => {
+  const query = useSelector((state) => state.notFound);
   return (
     <NotFoundStyled>
       <NotFoundImageStyled src={img404} alt="Image 404 Not found" />
       <NotFoundTitleStyled>
-        No se encontraron resultados para "Pokemon"
+        No se encontraron resultados para {query}
       </NotFoundTitleStyled>
     </NotFoundStyled>
   );

@@ -53,12 +53,15 @@ const reducer = (state, { type, payload }) => {
     case SET_FILTER:
       return {
         ...state,
-        filter: payload,
+        filter: payload.type,
+        title: payload.title,
       };
     case SEARCH_MOVIE:
       return {
         ...state,
         filter: "search",
+        notFound: payload,
+        title: "Resultado de la búsqueda",
         list: {
           ...state.list,
           search: searchMovie(payload, state.movieList, state.list.all),

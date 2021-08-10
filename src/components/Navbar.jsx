@@ -22,10 +22,27 @@ const FilterItemStyled = styled.li``;
 const Navbar = () => {
   const dispatch = useDispatch();
 
+  const changeTitle = (filter) => {
+    switch (filter) {
+      case "all":
+        return "Todas las peliculas";
+      case "mostValued":
+        return "Peliculas más valoradas";
+      case "leastValued":
+        return "Peliculas menos valoradas";
+
+      default:
+        return "Todas las peliculas";
+    }
+  };
+
   const handleFilter = (filter) => {
     dispatch({
       type: SET_FILTER,
-      payload: filter,
+      payload: {
+        type: filter,
+        title: changeTitle(filter),
+      },
     });
   };
   return (

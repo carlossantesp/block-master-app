@@ -81,7 +81,7 @@ const MovieList = () => {
           <NotFound />
         ) : (
           <>
-            <MoviListTitleStyled>Todas las peliculas</MoviListTitleStyled>
+            <MoviListTitleStyled>{state.title}</MoviListTitleStyled>
             <MovieListContainStyled>
               {movieListId.map((id) => (
                 <Movie key={id} movie={movieList.get(id)} />
