@@ -28,6 +28,8 @@ const NavStyled = styled.nav`
     background-color: transparent;
     padding-block-start: 0;
     transform: initial;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
   }
 `;
 const FiltersStyled = styled.ul`

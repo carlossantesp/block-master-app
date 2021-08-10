@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import Form from "./Form";
 import Icons from "./Icons";
 import useToggle from "../hooks/useToggle";
+import Search from "./Search";
 
 const HeaderStyled = styled.header`
   position: fixed;
@@ -17,10 +18,14 @@ const HeaderStyled = styled.header`
 `;
 const HeaderContainStyled = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-header);
   height: var(--h-header);
   position: relative;
+  @media screen and (min-width: 992px) {
+    justify-content: flex-start;
+  }
 `;
 const HeaderLogoStyled = styled.a`
   display: inline-block;
@@ -30,6 +35,7 @@ const HeaderLogoStyled = styled.a`
 `;
 const HeaderFormStyled = styled.div`
   display: none;
+  flex: 1;
   @media screen and (min-width: 992px) {
     display: inline-block;
   }
@@ -45,6 +51,7 @@ const HeaderIconsStyled = styled.div`
 
 const Header = ({ title }) => {
   const [isOpen, setIsOpen] = useToggle();
+  const [isSearch, setIsSearch] = useToggle();
   return (
     <HeaderStyled>
       <Wrapper>
@@ -57,10 +64,11 @@ const Header = ({ title }) => {
             <Form />
           </HeaderFormStyled>
           <HeaderIconsStyled>
-            <Icons setIsOpen={setIsOpen} />
+            <Icons setIsOpen={setIsOpen} setIsSearch={setIsSearch} />
           </HeaderIconsStyled>
         </HeaderContainStyled>
       </Wrapper>
+      <Search isSearch={isSearch} setIsSearch={setIsSearch} />
     </HeaderStyled>
   );
 };

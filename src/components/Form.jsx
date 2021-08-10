@@ -6,16 +6,20 @@ import Button from "./Button";
 import Input from "./Input";
 import { SEARCH_MOVIE, SET_FILTER } from "../actions";
 
-const FormStyled = styled.form`
-  flex: 1;
-  width: 100%;
-`;
 const FormGroupStyled = styled.div`
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  input {
+    width: 100%;
+  }
   button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    padding: 6px 12px;
+    line-height: 0;
+    @media screen and (min-width: 992px) {
+      padding: 12px 24px;
+    }
   }
 `;
 
@@ -41,7 +45,7 @@ const Form = () => {
     });
   };
   return (
-    <FormStyled onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <FormGroupStyled>
         <Input
           placeholder="Busca tu película favorita"
@@ -52,7 +56,7 @@ const Form = () => {
           <ISearch />
         </Button>
       </FormGroupStyled>
-    </FormStyled>
+    </form>
   );
 };
 
