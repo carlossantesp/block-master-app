@@ -6,6 +6,7 @@ import api from "../api";
 import { ADD_MOVIES } from "../actions";
 import { useSelector, useDispatch } from "react-redux";
 import Spinner from "./Spinner";
+import NotFound from "./NotFound";
 
 const MovieListStyled = styled.main`
   margin-block-start: var(--h-header);
@@ -75,13 +76,19 @@ const MovieList = () => {
   return (
     <MovieListStyled>
       <Wrapper>
-        <MoviListTitleStyled>Todas las peliculas</MoviListTitleStyled>
-        <MovieListContainStyled>
-          {movieListId.map((id) => (
-            <Movie key={id} movie={movieList.get(id)} />
-          ))}
-        </MovieListContainStyled>
-        <div ref={setElement}>{isVisible && <Spinner />}</div>
+        {movieListId.length === 0 ? (
+          <NotFound />
+        ) : (
+          <>
+            <MoviListTitleStyled>Todas las peliculas</MoviListTitleStyled>
+            <MovieListContainStyled>
+              {movieListId.map((id) => (
+                <Movie key={id} movie={movieList.get(id)} />
+              ))}
+            </MovieListContainStyled>
+            <div ref={setElement}>{isVisible && <Spinner />}</div>
+          </>
+        )}
       </Wrapper>
     </MovieListStyled>
   );
