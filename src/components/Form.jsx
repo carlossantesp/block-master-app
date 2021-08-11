@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
 import { ISearch } from "../icons";
 import Button from "./Button";
 import Input from "./Input";
+import { useDispatch } from "react-redux";
 import { SEARCH_MOVIE, SET_FILTER } from "../actions";
 
 const FormGroupStyled = styled.div`
@@ -15,10 +15,10 @@ const FormGroupStyled = styled.div`
   button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    padding: 6px 12px;
+    padding: 0.375rem 0.75rem;
     line-height: 0;
     @media screen and (min-width: 992px) {
-      padding: 12px 24px;
+      padding: 0.75rem 1.5rem;
     }
   }
 `;
@@ -33,7 +33,10 @@ const Form = () => {
     if (query) {
       return dispatch({
         type: SEARCH_MOVIE,
-        payload: query,
+        payload: {
+          query: query,
+          title: "Resultados de la búsqueda",
+        },
       });
     }
     return dispatch({

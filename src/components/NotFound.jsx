@@ -4,7 +4,7 @@ import styled from "styled-components";
 import img404 from "../images/404.png";
 
 const NotFoundStyled = styled.div`
-  max-inline-size: 700px;
+  max-inline-size: 43.75rem;
   margin: 0 auto;
 `;
 const NotFoundImageStyled = styled.img`
@@ -20,12 +20,12 @@ const NotFoundTitleStyled = styled.p`
 `;
 
 const NotFound = () => {
-  const query = useSelector((state) => state.notFound);
+  const query = useSelector((state) => state.query);
   return (
     <NotFoundStyled>
       <NotFoundImageStyled src={img404} alt="Image 404 Not found" />
       <NotFoundTitleStyled>
-        No se encontraron resultados para {query}
+        No se encontraron resultados para "{query}"
       </NotFoundTitleStyled>
     </NotFoundStyled>
   );

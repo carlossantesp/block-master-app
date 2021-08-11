@@ -60,11 +60,11 @@ const reducer = (state, { type, payload }) => {
       return {
         ...state,
         filter: "search",
-        notFound: payload,
-        title: "Resultado de la búsqueda",
+        query: payload.query,
+        title: payload.title,
         list: {
           ...state.list,
-          search: searchMovie(payload, state.movieList, state.list.all),
+          search: searchMovie(payload.query, state.movieList, state.list.all),
         },
       };
     default:
