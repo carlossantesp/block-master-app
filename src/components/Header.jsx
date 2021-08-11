@@ -50,7 +50,7 @@ const HeaderIconsStyled = styled.div`
 `;
 
 const Header = ({ title }) => {
-  const [isOpen, setIsOpen] = useToggle();
+  const [isOpenMenu, menuToggle] = useToggle();
   const [isSearch, setIsSearch] = useToggle();
   return (
     <HeaderStyled>
@@ -59,12 +59,12 @@ const Header = ({ title }) => {
           <HeaderLogoStyled href="/">
             <img src={logo} alt={title} />
           </HeaderLogoStyled>
-          <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+          <Navbar isOpen={isOpenMenu} menuToggle={menuToggle} />
           <HeaderFormStyled>
             <Form />
           </HeaderFormStyled>
           <HeaderIconsStyled>
-            <Icons setIsOpen={setIsOpen} setIsSearch={setIsSearch} />
+            <Icons menuToggle={menuToggle} setIsSearch={setIsSearch} />
           </HeaderIconsStyled>
         </HeaderContainStyled>
       </Wrapper>
