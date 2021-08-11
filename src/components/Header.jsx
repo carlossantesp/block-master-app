@@ -51,7 +51,7 @@ const HeaderIconsStyled = styled.div`
 
 const Header = ({ title }) => {
   const [isOpenMenu, menuToggle] = useToggle();
-  const [isSearch, setIsSearch] = useToggle();
+  const [isOpenSearch, searchToggle] = useToggle();
   return (
     <HeaderStyled>
       <Wrapper>
@@ -64,11 +64,11 @@ const Header = ({ title }) => {
             <Form />
           </HeaderFormStyled>
           <HeaderIconsStyled>
-            <Icons menuToggle={menuToggle} setIsSearch={setIsSearch} />
+            <Icons menuToggle={menuToggle} searchToggle={searchToggle} />
           </HeaderIconsStyled>
         </HeaderContainStyled>
       </Wrapper>
-      <Search isSearch={isSearch} setIsSearch={setIsSearch} />
+      <Search isOpen={isOpenSearch} searchToggle={searchToggle} />
     </HeaderStyled>
   );
 };

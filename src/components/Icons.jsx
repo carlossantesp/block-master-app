@@ -17,10 +17,10 @@ const IconButtonStyled = styled.button`
   }
 `;
 
-const Icons = ({ menuToggle, setIsSearch }) => {
+const Icons = ({ menuToggle, searchToggle }) => {
   return (
     <>
-      <IconButtonStyled type="button" onClick={setIsSearch}>
+      <IconButtonStyled type="button" onClick={searchToggle}>
         <ISearch />
       </IconButtonStyled>
       <IconButtonStyled type="button" onClick={menuToggle}>
