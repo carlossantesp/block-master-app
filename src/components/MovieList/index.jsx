@@ -10,10 +10,10 @@ import Movie from "../Movie";
 import NotFound from "../NotFound";
 import Spinner from "../Spinner";
 
-import { ADD_MOVIES } from "../../actions";
+import { ADD_MOVIES, FIND_DETAIL } from "../../actions";
 import api from "../../api";
 
-const MovieList = () => {
+const MovieList = ({ openModal }) => {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -31,6 +31,15 @@ const MovieList = () => {
     });
     setPage(page + 1);
     setIsLoading(false);
+  };
+
+  const handleMovieDetail = async (id) => {
+    const movieFind = await api.movieDetails(id);
+    dispatch({
+      type: FIND_DETAIL,
+      payload: movieFind,
+    });
+    openModal();
   };
 
   const getMoviesNextRef = useRef(getMoviesNextPage);
@@ -74,7 +83,11 @@ const MovieList = () => {
             <MoviListTitleStyled>{state.title}</MoviListTitleStyled>
             <MovieListContainStyled>
               {movieListId.map((id, index) => (
-                <Movie key={index} movie={movieList.get(id)} />
+                <Movie
+                  key={index}
+                  movie={movieList.get(id)}
+                  onClick={() => handleMovieDetail(id)}
+                />
               ))}
             </MovieListContainStyled>
             {isLoading && <Spinner />}

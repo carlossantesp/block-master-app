@@ -2,10 +2,10 @@ import React from "react";
 import { MovieStyled, MovieVoteStyled, MovieImageStyled } from "./MovieElement";
 import { IStar } from "../../icons";
 
-const Movie = ({ movie }) => {
+const Movie = ({ movie, ...otherProps }) => {
   const { poster_path, title, vote_average } = movie;
   return (
-    <MovieStyled>
+    <MovieStyled {...otherProps}>
       <MovieVoteStyled vote={vote_average}>
         <IStar />
         {vote_average}

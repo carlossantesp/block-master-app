@@ -20,7 +20,7 @@
   --headline5: 700 25px/30.48px var(--fontPrimary);
   --body1: 400 18px/27px var(--fontPrimary);
   --body1-bold: 700 18px/27px var(--fontPrimary);
-  --body2: 400 16px/19px var(--fontPrimary);
+  --body2: 400 16px/22px var(--fontPrimary);
   --body2-bold: 700 16px/22px var(--fontPrimary);
   --button: 700 18px/28px var(--fontPrimary);
   --caption: 400 12px/22px var(--fontPrimary);
@@ -47,7 +47,7 @@
   --section: var(--md);
   --w-loader: 40px;
   --border-loader: 4px;
-
+  --w-card-modal: 7rem;
   --w-size: 73rem;
   --h-full: 100vh;
 }
@@ -65,6 +65,7 @@
     --section: 3.5rem;
     --w-loader: 60px;
     --border-loader: 6px;
+    --w-card-modal: 15rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -75,6 +76,7 @@
     --w-card: 13rem;
     --w-loader: 80px;
     --border-loader: 8px;
+    --w-card-modal: 18rem;
   }
 }
 
