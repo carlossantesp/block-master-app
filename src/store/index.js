@@ -18,6 +18,7 @@ const moviesTrending = [];
 const initialState = {
   movieList: movieListAsMap(movies),
   movieTrending: movieListAsMap(moviesTrending),
+  movieDetail: null,
   filter: "all",
   title: "Todas las peliculas",
   list: {
@@ -30,8 +31,8 @@ const initialState = {
 
 const store = createStore(
   reducer,
-  initialState
-  // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  initialState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 export default store;

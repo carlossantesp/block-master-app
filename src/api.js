@@ -18,6 +18,13 @@ class API {
     const data = await response.json();
     return data;
   }
+  async movieDetails(id) {
+    const response = await fetch(
+      `${this.baseAPI}movie/${id}?api_key=${this.API_KEY}`
+    );
+    const data = await response.json();
+    return data;
+  }
   async trendingMovie() {
     const response = await fetch(`${this.trendingWeek}&page=1`);
     const data = await response.json();

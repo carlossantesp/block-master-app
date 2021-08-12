@@ -1,4 +1,4 @@
-import { ADD_MOVIES, SEARCH_MOVIE, SET_FILTER } from "../actions";
+import { ADD_MOVIES, FIND_DETAIL, SEARCH_MOVIE, SET_FILTER } from "../actions";
 import {
   getAllIds,
   getLeastValuedIds,
@@ -49,6 +49,12 @@ const reducer = (state, { type, payload }) => {
         },
       };
     }
+
+    case FIND_DETAIL:
+      return {
+        ...state,
+        movieDetail: payload,
+      };
 
     case SET_FILTER:
       return {
