@@ -1,15 +1,13 @@
-import React from "react";
 import styled from "styled-components";
-import { IStar } from "../icons";
 
-const MovieStyled = styled.article`
+export const MovieStyled = styled.article`
   position: relative;
+  overflow: hidden;
   min-inline-size: var(--w-card);
   border-radius: var(--sm);
-  overflow: hidden;
   cursor: pointer;
 `;
-const MovieVoteStyled = styled.p`
+export const MovieVoteStyled = styled.p`
   font: var(--body2-bold);
   display: flex;
   align-items: center;
@@ -37,26 +35,8 @@ const MovieVoteStyled = styled.p`
     }
   }
 `;
-const MovieImageStyled = styled.img`
+export const MovieImageStyled = styled.img`
   object-fit: cover;
   height: 100%;
   width: 100%;
 `;
-
-const Movie = ({ movie }) => {
-  const { poster_path, title, vote_average } = movie;
-  return (
-    <MovieStyled>
-      <MovieVoteStyled vote={vote_average}>
-        <IStar />
-        {vote_average}
-      </MovieVoteStyled>
-      <MovieImageStyled
-        src={`//image.tmdb.org/t/p/w220_and_h330_face${poster_path}`}
-        alt={title}
-      />
-    </MovieStyled>
-  );
-};
-
-export default Movie;

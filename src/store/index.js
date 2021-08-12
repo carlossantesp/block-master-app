@@ -7,20 +7,21 @@ import {
   getLeastValuedIds,
 } from "../normalize";
 
-import api from "../api";
+// import api from "../api";
 
-const getMovies = async () => {
-  const { results } = await api.moviePage(1);
-  return results;
-};
-const movies = await getMovies();
+// const dataTrending = await api.trendingMovie();
+// const moviesTrending = dataTrending.results;
+
+const movies = [];
+const moviesTrending = [];
 
 const initialState = {
   movieList: movieListAsMap(movies),
+  movieTrending: movieListAsMap(moviesTrending),
   filter: "all",
   title: "Todas las peliculas",
-  notFound: "",
   list: {
+    allTrending: getAllIds(moviesTrending),
     all: getAllIds(movies),
     mostValued: getMostValuedIds(movies),
     leastValued: getLeastValuedIds(movies),
