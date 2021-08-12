@@ -7,11 +7,6 @@ import {
   getLeastValuedIds,
 } from "../normalize";
 
-// import api from "../api";
-
-// const dataTrending = await api.trendingMovie();
-// const moviesTrending = dataTrending.results;
-
 const movies = [];
 const moviesTrending = [];
 

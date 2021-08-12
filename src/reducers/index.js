@@ -1,4 +1,10 @@
-import { ADD_MOVIES, FIND_DETAIL, SEARCH_MOVIE, SET_FILTER } from "../actions";
+import {
+  ADD_MOVIES,
+  FIND_DETAIL,
+  SEARCH_MOVIE,
+  SET_FILTER,
+  TRENDING_MOVIES,
+} from "../actions";
 import {
   getAllIds,
   getLeastValuedIds,
@@ -49,13 +55,23 @@ const reducer = (state, { type, payload }) => {
         },
       };
     }
-
     case FIND_DETAIL:
       return {
         ...state,
         movieDetail: payload,
       };
-
+    case TRENDING_MOVIES: {
+      const movieTrending = movieListAsMap(payload);
+      const allTrending = getAllIds(payload, state.list.allTrending);
+      return {
+        ...state,
+        movieTrending,
+        list: {
+          ...state.list,
+          allTrending,
+        },
+      };
+    }
     case SET_FILTER:
       return {
         ...state,
