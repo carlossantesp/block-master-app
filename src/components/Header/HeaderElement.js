@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,7 +13,7 @@ export const HeaderContainStyled = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: var(--gap-header);
-  height: var(--h-header);
+  min-height: var(--h-header);
   position: relative;
   @media screen and (min-width: 992px) {
     justify-content: flex-start;

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const MovieListStyled = styled.main`
-  margin-block-start: var(--h-header);
   padding-block-start: var(--section);
   padding-block-end: var(--section);
 `;
