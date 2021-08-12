@@ -35,14 +35,16 @@ const MovieDetail = () => {
     return (
       <MovieWrapperStyled>
         <MovieImageStyled>
-          <MovieVoteStyled vote={vote_average}>
-            <IStar />
-            {vote_average}
-          </MovieVoteStyled>
-          <img
-            src={`//image.tmdb.org/t/p/w220_and_h330_face${poster_path}`}
-            alt={title}
-          />
+          <div>
+            <MovieVoteStyled vote={vote_average}>
+              <IStar />
+              {vote_average}
+            </MovieVoteStyled>
+            <img
+              src={`//image.tmdb.org/t/p/w220_and_h330_face${poster_path}`}
+              alt={title}
+            />
+          </div>
         </MovieImageStyled>
         <MovieInfoStyled>
           <MovieTitleStyled>{title}</MovieTitleStyled>

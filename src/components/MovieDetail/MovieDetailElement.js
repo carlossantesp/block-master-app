@@ -8,14 +8,21 @@ export const MovieWrapperStyled = styled.div`
     flex-direction: row;
     gap: var(--xxlg);
     align-items: center;
+    div {
+      flex: 1;
+    }
   }
 `;
 export const MovieImageStyled = styled.div`
-  position: relative;
   min-inline-size: var(--w-card-modal);
   margin: 0 auto;
+  div {
+    position: relative;
+    inline-size: var(--w-card-modal);
+    margin: 0 auto;
+  }
   img {
-    width: 100%;
+    inline-size: inherit;
     object-position: top;
     object-fit: cover;
   }
