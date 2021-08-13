@@ -5,6 +5,7 @@ import logo from "./images/logo.svg";
 import Modal from "./components/Modal";
 import useModal from "./hooks/useModal";
 import MovieDetail from "./components/MovieDetail";
+import Slider from "./components/Slider";
 
 const App = () => {
   const [modal, openModal, closeModal] = useModal();
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <Fragment>
       <Header logo={logo} title="Block Master" />
+      <Slider />
       <MovieList openModal={openModal} />
       <Modal openModal={modal} closeModal={closeModal}>
         <MovieDetail />

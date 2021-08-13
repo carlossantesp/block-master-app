@@ -48,6 +48,8 @@
   --w-loader: 40px;
   --border-loader: 4px;
   --w-card-modal: 10rem;
+  --h-slider: 6.5rem;
+  --w-slider-button: 12px;
   --w-size: 73rem;
   --h-full: 100vh;
 }
@@ -66,6 +68,7 @@
     --w-loader: 60px;
     --border-loader: 6px;
     --w-card-modal: 15rem;
+    --h-slider: 15rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -77,6 +80,7 @@
     --w-loader: 80px;
     --border-loader: 8px;
     --w-card-modal: 18rem;
+    --h-slider: 20rem;
   }
 }
 
