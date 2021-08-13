@@ -11,6 +11,7 @@ export const ButtonStyled = styled.button`
 
   width: ${({ isBlock }) => isBlock && "100%"};
   display: ${({ isBlock }) => (isBlock ? "block" : "inline-block")};
+  align-items: center;
   background-color: ${({ typeBtn }) =>
     typeBtn === "primary" ? "var(--primary)" : "var(--black)"};
   color: ${({ typeBtn }) =>
@@ -34,5 +35,7 @@ export const ButtonStyled = styled.button`
   svg {
     width: 1.25rem;
     height: 1.25rem;
+    vertical-align: middle;
+    margin-right: var(--xs);
   }
 `;
